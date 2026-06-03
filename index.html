@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc & Base Gas Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arc & Base Gas Tracker</h1>
+        
+        <div class="gas-cards">
+            <div class="card">
+                <h3>Yavaş (Low)</h3>
+                <p id="low-gas">0.0000 Gwei</p>
+            </div>
+            <div class="card active">
+                <h3>Standart (Market)</h3>
+                <p id="market-gas">0.0000 Gwei</p>
+            </div>
+            <div class="card">
+                <h3>Hızlı (Fast)</h3>
+                <p id="fast-gas">0.0000 Gwei</p>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <h2>İşlem Ücreti Hesaplayıcı</h2>
+            <label for="tx-type">İşlem Türü:</label>
+            <select id="tx-type">
+                <option value="transfer">Standart Transfer (ETH)</option>
+                <option value="swap">Token Takası (Swap)</option>
+                <option value="nft">NFT Minting</option>
+            </select>
+            
+            <div class="result-box">
+                <p>Tahmini Maliyet:</p>
+                <h3 id="calc-result">$0.00</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
